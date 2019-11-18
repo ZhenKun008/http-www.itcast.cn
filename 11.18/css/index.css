@@ -1,0 +1,82 @@
+.index{
+    height:120px;
+    background-color:#333333
+}
+.index-centen{
+    width:1200px;
+height: 120px;
+background-color:#333333;
+margin-left:230px
+}
+.index-left{
+    float:left;    
+}
+.zho{
+    float:left}
+.you {
+    float:right
+}
+.p{
+    float:right
+}
+.i{
+    margin-top:31px
+}
+.cai{
+    float: right;
+    margin-top:47px;
+margin-left:128px;
+
+}
+.q{
+    font-size: 20px;
+    color:#fdd01a
+}
+.zho{
+    margin-top:40px;
+    /* margin-left: */
+}
+.tu{
+    width: 222px;
+    height:62px;
+    margin-right:50;
+    margin-top:25px
+}
+
+.p{
+    margin-top:47px;
+    margin-right:50px
+}
+.zho{
+    width:398px;
+    height:40px;
+    border:2px solid #fdd01a
+}
+.zho button{
+    width:124px;
+    height:40px;
+    background-color:#fdd01a;
+    border:none;
+    float:right ;
+    margin-bottom:0px;
+     
+}
+.kun{
+    float:left
+}
+.kun{
+    width: 250px;
+    height:40px;
+    border:none;
+    float: none;
+}
+.xu{
+    height:40px;
+    float:left;
+    font-size: 12px;
+    color:#fdd01a;
+background-color:white;
+text-align-last: center;
+
+
+}
