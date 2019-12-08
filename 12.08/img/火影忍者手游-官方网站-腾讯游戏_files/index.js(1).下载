@@ -1,0 +1,311 @@
+// 插入footer
+Ninja.footer('#footer');
+//头部下拉菜单
+$('.has-down-menu').hover(function() {
+    $(this).addClass('on')
+}, function() {
+    $(this).removeClass('on')
+});
+
+//侧边栏
+$(window).scroll(function(event) {
+    var scrollheight = document.body.scrollTop || document.documentElement.scrollTop;
+    if (scrollheight > 980) {
+        $('.menu-aside').addClass('fixed')
+    } else {
+        $('.menu-aside').removeClass('fixed')
+    }
+    var _target=$('.menu-aside li')
+    if(scrollheight>$('.sec6').offset().top-100){
+        _target.removeClass('on').eq(5).addClass('on')
+    }else if(scrollheight>$('.sec5').offset().top-100){
+        _target.removeClass('on').eq(4).addClass('on')
+    }else if(scrollheight>$('.sec4').offset().top-100){
+        _target.removeClass('on').eq(3).addClass('on')
+    }else if(scrollheight>$('.sec3').offset().top-100){
+        _target.removeClass('on').eq(2).addClass('on')
+    }else if(scrollheight>$('.sec2').offset().top-100){
+        _target.removeClass('on').eq(1).addClass('on')
+    }else if(scrollheight>$('.sec1').offset().top-100){
+        _target.removeClass('on').eq(0).addClass('on')
+    }
+});
+$('.menu-aside-list li').on('click',  function(event) {
+    var index=$(this).index(),
+        top=$('.sec'+(index+1)).offset().top;
+    $(this).addClass('on').siblings().removeClass('on')
+    $('html,body').animate({
+         scrollTop: top
+     }, 500)
+    PTTSendClick('nav','aside-nav'+(index+1),'导航');
+});
+//新闻广告轮播
+var gg = new tgAds({
+    ggID: '15141'
+        //,info:['2024','2025','2026','2027','2033','2034']//,info:'201206'
+        ,
+    info: '201605',
+    box: 'promo',
+    pgv: 'main.adsRolling.ad',
+    mouse: true
+})
+
+
+//tab轮播
+need("biz.tabs",function (tabs){
+    //新闻轮播
+    tabs.init("news-tab", "tab-panel", {
+        timeout: 80,//延迟切换时间。默认参数为60;
+        currCls: "on",//设置当前标签（li）class 名。默认参数为"on";
+        disCls: "dis-b",//控制显示class名。默认参数为"dis";
+    });
+    //赛事（无差别，TGA，WGC，QGC）轮播
+    tabs.init("match-tab", "tab-panel", {
+        timeout: 80,//延迟切换时间。默认参数为60;
+        currCls: "on",//设置当前标签（li）class 名。默认参数为"on";
+        disCls: "dis-b",//控制显示class名。默认参数为"dis";
+    });
+
+});
+
+//无差别赛事
+$('.season-list li').on('mouseenter',  function(event) {
+    var index=$(this).index()
+    $(this).addClass('on').siblings().removeClass('on')
+    $('.season-bd .season-panel').removeClass('dis-b').eq(index).addClass('dis-b')
+});
+
+
+//视频攻略
+var carousel = function(obj) {
+    this.container = $(obj.container),
+    this.count = obj.count,
+    this.classname = obj.classname,
+    this.tab = $(obj.tab),
+    this.lastIndex=0;
+    this.timer = null;
+}
+
+carousel.prototype = {
+    init: function() {
+        var _this = this
+        $('.' + _this.classname).on('click', function(event) {
+            event.preventDefault();
+            var direction = $(this).attr('data-direction');
+            if (direction == 'left') {
+                _this.turnLeft()
+            } else {
+                _this.turnRight()
+            }
+        })
+        this.tab.on('click',  function(event) {
+            var index=$(this).index();
+            $(this).addClass('on').siblings().removeClass('on')
+            _this.goto(index)
+        });
+    },
+    turnLeft: function() {
+        var _this = this;
+        this.defaultFun('left')
+        this.lastIndex--;
+        this.lastIndex=this.lastIndex<0?5:this.lastIndex;
+        this.tab.removeClass('on').eq(this.lastIndex).addClass('on')
+    },
+    turnRight: function() {
+        var _this = this;
+        this.defaultFun('right')
+        this.lastIndex++;
+        this.lastIndex=this.lastIndex>5?0:this.lastIndex;
+        this.tab.removeClass('on').eq(this.lastIndex).addClass('on')
+    },
+    goto:function(index){
+        var dir=index-this.lastIndex;
+        var direction='';
+        if(dir<0){
+            direction='left'
+        }else if(dir>0){
+            direction='right'
+        }
+        for(var i=0;i<Math.abs(dir);i++){
+            this.defaultFun(direction)
+        }
+        this.lastIndex=index;
+    },
+    defaultFun: function(direction) {
+        var _this = this;
+        $(this.container).find('.gl-it').each(function() {
+            var old_order = $(this).attr('data-order');
+            if (direction == 'right') { old_order--; }
+            if (direction == 'left') { old_order++; }
+            if (old_order == 7) { old_order = 1; }
+            if (old_order == 0) { old_order = 6; }
+            $(this).removeClass('po-1 po-2 po-3 po-4 po-5 po-6')
+            $(this).addClass('po-' + old_order);
+            $(this).attr({ 'data-order': old_order });
+        })
+    }
+}
+
+var ex = new carousel({
+    container: '.slide-list',
+    count: 5,
+    classname: 'btn-arrow',
+    tab:'.gl-tab .hd li'
+});
+ex.init();
+
+//忍者站填充
+var ninjaArr=[],
+    newNinja=[],
+    _page = 1,
+    _pageLen = 8,
+    slt = true;
+$.ajax({
+    url: '//hyrz.qq.com/zlkdatasys/ninja_list.json',
+    dataType: 'jsonp',
+    async: false,
+    jsonpCallback: 'getNinjaList',
+    success: function(data) {
+        var imgSrc = data.gwsyrzzfm_64||"//game.gtimg.cn/images/hyrz/web201807/ninja.png";
+        $("#ninjaImg").html('<img src="' + imgSrc + '" alt="忍者">');
+        //最新忍者
+        $.each(data.mfzrzlb_4f,
+            function(i) {
+                newNinja.push(this.jsid_34);
+            }
+        );
+        $.each(data.rzlb_67,
+            function(i,v) {
+              if(v.xtz_ea){
+                $.each(data.rzlb_67[i].xtz_ea, function(j) {
+                    ninjaArr.push({
+                        'name': data.rzlb_67[i].rzmc_39 + '<br>' + data.rzlb_67[i].xtz_ea[j].xtmc_14,
+                        'href': data.rzlb_67[i].jsid_34 == '*' ? 'javascript:alert(\'敬请期待！\')' : '//hyrz.qq.com/act/a20170510ninja/ninja.shtml?nid=' + data.rzlb_67[i].jsid_34 + '&xid=' + j,
+                        'grade': data.rzlb_67[i].xtz_ea[j].rzdj_a8,
+                        'trait': data.rzlb_67[i].xtz_ea[j].jsbq_0a,
+                        'head': data.rzlb_67[i].xtz_ea[j].rztx_fa,
+                        'id':data.rzlb_67[i].jsid_34,
+                        'isNew':jQuery.inArray(data.rzlb_67[i].jsid_34, newNinja)>-1?true:false
+                    });
+                });
+              }
+            }
+        );
+        query(0)
+        $('.ninja-choose li').click(function() { query(0); });
+    }
+});
+
+function query(p) {
+    var pageStart, pageEnd,d = $("input[name='grade']:checked").val();
+    _list = '';
+    if (p == 0) {
+        slt = true;
+        _page = 1;
+        if(d!='all'){
+            slt += !$("input[name='grade']:checked").val() ? '' : '&&ninjaArr[i].grade==\'' + $("input[name='grade']:checked").val() + '\''
+        }
+    }
+    _page += p;
+    if (p != 0) {
+        pageStart = (_page - 1) * _pageLen;
+        pageEnd = _page * _pageLen
+    } else {
+        pageStart = 0;
+        pageEnd = _pageLen
+    }
+    _list = '';
+    var j = 0;
+    $.each(ninjaArr, function(i) {
+        if (eval(slt)){
+            if (j >= pageStart && j < pageEnd) {
+                _list += '<li><a href="' + this.href + '"' + (this.href.indexOf('alert') < 0 ? ' target="_blank" onclick="PTTSendClick(\'link\',\'link-ninja'+this.id+'\',\'忍者详情\')"' : '') + '><div class="img-box"><img src="' + this.head + '" alt=""></div>'+
+                 (this.isNew==true?'<span class="ninja-label spr"></span>':'') +'</a></li>';
+            }
+            j++;
+        }
+    })
+    $('.ninja-list ul').html('');
+    $('.ninja-list ul').html(_list == '' ? '<li style="float:none; width:100%; text-align: center;color:#f00;background:none;margin:20px 0">对不起，没有找到符合条件的结果，请重新筛选！</li>' : _list);
+    if (_pageLen > j) {
+        $('.btn-ninja-prev').css('display', 'none');
+        $('.btn-ninja-next').css('display', 'none');
+    } else if (_page * _pageLen >= j) {
+        $('.btn-ninja-prev').css('display', 'block');
+        $('.btn-ninja-next').css('display', 'none');
+    } else if (_page == 1) {
+        $('.btn-ninja-prev').css('display', 'none');
+        $('.btn-ninja-next').css('display', 'block');
+    } else {
+        $('.btn-ninja-prev').css('display', 'block');
+        $('.btn-ninja-next').css('display', 'block');
+    }
+}
+
+//忍者站
+$('.ninja-choose input').on('click',  function(event) {
+    var parent=$(this).parents('li');
+    $('.ninja-choose li').removeClass('on')
+    parent.addClass('on')
+});
+
+//活动弹窗
+// name:赛事名
+// popStart:设置活动弹窗开启时间 如：2018/07/18
+// gameStart:设置赛事开始时间 如：2018/07/22
+var timer=null;
+function setGame(name,popStart,gameStart){
+    var startTime=new Date(popStart).getTime(),
+        endTime=new Date(gameStart).getTime()+3600*24*1000,
+        nowTime=new Date().getTime(),
+        dayEle=$('.game-countdown em'),
+        $countDownEle = $("#countdownPop");
+    timer=setInterval(function(){
+        if(nowTime>=startTime&&nowTime<=endTime){
+            $countDownEle.removeClass('dis-n');
+            $('.pop-game-name').html(name);
+            nowTime=Date.now();
+            var t = endTime - nowTime;
+            var day=stampChangeToTime(t);
+            dayEle.html(day)
+        }else{
+            clearInterval(timer)
+            $countDownEle.addClass('dis-n')
+        }
+    },1000)
+}
+function stampChangeToTime(t) {
+    if (t > 0) {
+        d = Math.floor(t / 1000 / 60 / 60/ 24 );
+        if (d < 10) {
+            d = "0" + d
+        }
+    }else{
+        d='00'
+    }
+    return d
+};
+$('.btn-pop-close').on('click', function(event) {
+    $("#countdownPop").addClass('dis-n')
+    clearInterval(timer)
+});
+
+
+//赛事名 活动弹窗开启时间 赛事开始时间
+// setGame('年中夏季总决赛','2018/08/18','2018/08/30')
+$.ajax({
+    url: '//hyrz.qq.com/zlkdatasys/data_zlk_gwsydjsdkkg.json',
+    dataType: 'json',
+    success: function(data) {
+      var res = data,
+          dateReg = /^\d{4}(\-|\/|\.)\d{1,2}\1\d{1,2}$/,
+          countdownData = {};
+      countdownData.name = res.gwsydjsdkssmc_df;
+      countdownData.datePopShow = dateReg.test(res.gwsydjsdkkqrq_f0)?res.gwsydjsdkkqrq_f0:"2018/7/11";
+      countdownData.dateMatchStart = dateReg.test(res.gwsydjsdksskqrq_36)?res.gwsydjsdksskqrq_36:"2018/7/12";
+      // console.log(countdownData);
+      //赛事名 活动弹窗开启时间 赛事开始时间
+      setGame(countdownData.name,countdownData.datePopShow,countdownData.dateMatchStart)
+
+    }
+});

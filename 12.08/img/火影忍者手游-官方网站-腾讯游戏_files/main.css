@@ -1,0 +1,636 @@
+.dis-b{display: block !important;}
+.dis-n{display: none;}
+em,i{font-style: normal;}
+.pd65{padding-top: 65px;}
+/* menu-aside */
+.menu-aside{
+	width: 180px;
+	height: 488px;
+	background: url(//game.gtimg.cn/images/hyrz/web201807/bg-aside.png) no-repeat top right;
+	position: absolute;
+	right: 0;
+	top: 970px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	z-index: 100;
+}
+.menu-aside.fixed{
+	position: fixed;
+	top: 20px;
+}
+.menu-aside .menu-aside-list{
+	width: 118px;
+	float: right;
+	margin: 20px 0 10px;
+}
+.menu-aside-list li{
+	line-height: 50px;
+	height: 53px;
+	background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat -414px -270px;
+	margin-bottom: -11px;
+	transition: all .4s;
+	-webkit-transition:all .4s;
+}
+.menu-aside-list a{
+	display: block;
+	height: 100%;
+	transition: all .4s;
+	-webkit-transition:all .4s;
+	color: #000;
+}
+.menu-aside-list li.on,.menu-aside-list li:hover{
+	background-position: -582px -274px;
+}
+.menu-aside-list li.on a,.menu-aside-list li:hover a{
+	color:#fff;
+}
+.menu-aside .menu-aside-down{
+	width: 118px;
+	float: right;
+}
+.menu-aside .menu-aside-down img{
+	width:95px;
+}
+.menu-aside-down a{
+	display:  block;
+	width: 98px;
+	height: 27px;
+	margin: 3px auto 0;
+}
+.menu-aside-down .btn-ios-down{
+	background-position: -445px -90px;
+}
+.menu-aside-down .btn-android-down{
+	background-position: -595px -90px;
+}
+.menu-aside .bell{
+	position: absolute;
+	right: 24px;
+	width: 84px;
+	top: 460px;
+	animation:rotate 1.5s ease-in-out infinite alternate;
+	-webkit-animation:rotate 1.5s ease-in-out infinite alternate;
+}
+@keyframes rotate{0%{transform: rotate(-4deg);transform-origin: top center;} 100%{transform: rotate(4deg);transform-origin: top center;}}
+@-webkit-keyframes rotate{0%{-webkit-transform: rotate(-4deg);-webkit-transform-origin:top center;} 100%{-webkit-transform: rotate(4deg);-webkit-transform-origin:top center;}}
+
+
+/* comm */
+.sec-con{
+	width: 1000px;
+	margin:0 auto;
+	position: relative;
+}
+.sec2 .sec-con{
+	top: -67px;
+}
+.sec{
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.sec1{
+	height: 872px;
+	/* background-image: url(//game.gtimg.cn/images/hyrz/web201807/kv.jpg); */
+	position: relative;
+}
+.sec2{
+	height: 664px;
+	position: relative;
+	z-index: 1;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg1.jpg);
+}
+.sec3{
+	height: 926px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg2.jpg);
+}
+.sec4{
+	height: 599px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg3.jpg);
+}
+.sec5{
+	height: 831px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg4.jpg);
+}
+.sec6{
+	height: 822px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg5.jpg);
+}
+.sec-title{
+	width: 720px;
+	height: 123px;
+	margin:0 auto;
+	background: url(//game.gtimg.cn/images/hyrz/web201807/title.png) no-repeat 0 0;
+}
+.sec2 .sec-title{
+	background-position: 0 0;
+}
+.sec3 .sec-title{
+	background-position: 0 -152px;
+}
+.sec4 .sec-title{
+	background-position: 0 -323px;
+}
+.sec5 .sec-title{
+	background-position: 0 -496px;
+}
+.sec6 .sec-title{
+	background-position: 0 -667px;
+}
+
+
+/* sec1 */
+.ewm-top{width: 451px;height: 175px;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-ewm.png) no-repeat top center;position: absolute;left: 0;right: 0;margin:0 auto;top: 605px;z-index: 2;}
+.ewm-top a{display: block;width: 261px;height: 58px;position: absolute;transition: all .5s;-webkit-transition:all .5s;}
+.ewm-top .btn-ios-down{background-position: -341px -1567px;right: 18px;top: 23px;}
+.ewm-top .btn-android-down{background-position: 0 -1566px;right: 18px;top: 95px;}
+.ewm-top a:hover{filter: brightness(1.3);-webkit-filter:brightness(1.3);}
+.ewm-line{position: absolute;width: 141px;left: 18px;top: 17px;animation:mainbarcode 3s linear infinite alternate;-webkit-animation:mainbarcode 3s linear infinite alternate;}
+.wave-wrap{
+	width: 1920px;
+	left: 50%;
+	top: 573px;
+	margin-left: -960px;
+	z-index: 1;
+	position: absolute;
+}
+.bg-sec1{
+	width: 1920px;
+	height: 299px;
+	position:  relative;
+	z-index: 2;
+	background: url(//game.gtimg.cn/images/hyrz/web201807/bg0.png) no-repeat top center;
+}
+.wave-wrap .wave{position: absolute;transform: translateY(4%);-webkit-transform: translateY(4%); animation:upToDown 3.5s linear infinite alternate;-webkit-animation:upToDown 3.5s linear infinite alternate;}
+.wave-wrap .wave1{width: 284px;left: -1px;top: 78px;}
+.wave-wrap .wave2{width: 357px;left: 164px;top: 104px;animation-delay: .5s;-webkit-animation-delay:.5s;}
+.wave-wrap .wave3{width: 373px;left: 800px;top: 122px;z-index: 1;animation-delay: 1.5s;-webkit-animation-delay:1.5s;}
+.wave-wrap .wave4{width: 357px;right: 578px;top: 98px;animation-delay: .9s;-webkit-animation-delay:.9s;}
+.wave-wrap .wave5{width: 434px;right: 0;top: -12px;animation-delay: .6s;-webkit-animation-delay:.6s;}
+
+/* sec2 */
+.sec2 .down-frame{position: absolute;left: 0;top: 155px;width: 236px;height: 304px;overflow: hidden;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-down-frame.png) no-repeat top center;}
+.down-frame img{width: 160px;display: block;margin: 25px auto 12px;}
+.down-frame a{display: block;width: 171px;height: 38px;margin: 5px auto 0;transition: all .3s;-webkit-transition:all .3s;}
+.down-frame a:hover{filter: brightness(1.2);-webkit-filter:brightness(1.2);}
+.down-frame .btn-ios-down{background-position: -433px -134px;}
+.down-frame .btn-android-down{background-position: -433px -188px;}
+.down-frame .bell1{width: 53px;position: absolute;right: 0px;top: -3px;margin: 0;}
+/* news-banner */
+.gg {width: 753px;height: 303px;background-color: #12141a;margin: 30px 0 0 245px;padding: 2px;}
+#promo {overflow: hidden;position: relative;z-index: 1;width: 100%;height: 100%;}
+.adPic {position: absolute;width: 100%;height: 100%;left: 0;top: 0}
+.adPic a {display: block;width: 100%;height: 100%;overflow: hidden;position: absolute;left: 0;top: 0;background: #0e97dc}
+.adPic img {width: 100%;height: 100%;position: absolute;top: 0;left: 0}
+.adPic p {position: relative;padding-top: 50px}
+.loadI {width: 130px;text-align: center;line-height: 20px;color: #FFF;background: #18b2ff;margin: 0px auto;display: block}
+.adPic { position:absolute; width:100%; height:100%; left:0; top:0}
+.adPic a { display:block; width:100%; height:100%; overflow:hidden; position:absolute; left:0; top:0; background:#0e97dc}
+.adPic img { width:100%; height:100%; position:absolute; top:0; left:0}
+.adPic p { position:relative; padding-top:50px}
+.loadI { width:130px; text-align:center; line-height:20px; color:#FFF; background:#18b2ff; margin:0px auto; display:block}
+.adPicUl { width:1000%; height:100%; overflow:hidden; -webkit-transition: all 0.1s linear; -webkit-transform-style: preserve-3d;-webkit-backface-visibility: hidden}
+.adPicUl li { float:left; width:14.3%; height: 100%;}
+.adPicUl a { display:block; width:100%; height: 100%}
+.adPicUl img { display:block; width:100%; height:100%}
+.adBtn {position: absolute;left: 0;bottom: 0;width: 100%;height: 41px;line-height: 41px;background-color: rgba(15, 23, 38, .6);background-color: #000000\9;opacity: 0.6\9;filter: alpha(opacity=60)\9;}
+.adBtn a {display: block;float: left;width: 25%;text-align: center;position: relative;color: #777a86}
+.adBtn a:after {content: "";width: 1px;height: 12px;background-color: #586572;position: absolute;right: 0;top: 15px;}
+.adBtn a:last-child:after{display: none;}
+.adBtn a.on {color: #ffffff}
+/* news-tab */
+.news-tab{width: 741px;height: 200px;overflow:hidden;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-news.png) no-repeat top center;margin-top: 25px;}
+.news-tab .hd ul{width: 130px;float: left;margin: 3px 0 0 3px;position: relative;}
+.news-tab .hd ul:before,.news-tab .hd ul:after{position: absolute;content: '';display: block;width: 10px;height: 10px;background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat;left: -2px;z-index: 1;}
+.news-tab .hd ul:before{top: -2px;background-position: -690px -142px;}
+.news-tab .hd ul:after{bottom: -2px;background-position: -690px -178px;}
+.news-tab .hd li{height: 48px;line-height: 48px;border-bottom: 1px solid #2d323e;background: #1f232d;font-size: 0;color:transparent;}
+.news-tab .hd .news-it01{height: 47px;line-height: 47px;}
+.news-tab .hd .news-it04{border-bottom: none;}
+.news-tab .hd li.on{background: #565e71}
+.news-tab li a{display: block;height: 100%;}
+.news-tab li a:hover{color: #e9a96e;}
+.news-tab .news-it01 a{background-position: -251px -439px;}
+.news-tab .news-it02 a{background-position: -363px -438px;}
+.news-tab .news-it03 a{background-position: -477px -438px;}
+.news-tab .news-it04 a{background-position: -590px -438px;}
+.news-tab .news-it01.on a{background-position: -251px -363px;}
+.news-tab .news-it02.on a{background-position: -363px -362px;}
+.news-tab .news-it03.on a{background-position: -477px -362px;}
+.news-tab .news-it04.on a{background-position: -590px -362px;}
+.news-tab .bd{width: 593px;height: 177px;margin: 11px 0 0 140px;position: relative;}
+.tab-panel{position: absolute;height: 100%;width: 100%;left: 0;top: 0;display: none;}
+.news-tab .tab-panel li{line-height: 35px;height: 35px;padding: 0 15px;overflow: hidden;font-size: 16px;}
+.news-tab .tab-panel span,.news-tab .tab-panel p{float: left;}
+.news-time{float: right;}
+.news-icon{display: block;width: 13px;height: 13px;background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat -687px -226px;margin: 12px 0 0 0;}
+.news-tab .tab-panel p, .match-news li p, .gl-list li p,.match-video p{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.news-tab .tab-panel p, .match-news li p,.gl-list li p{max-width: 76%;}
+.news-tab .news-time{font-size: 14px;color:#b69e7a;}
+.btn-news-more{display: block;width: 253px;height: 200px;position: absolute;right: -11px;top: 485px;background-position: 0 -363px;}
+/* pop-act */
+.pop-act{width: 207px;position: absolute;top: 225px;left: -230px;}
+.pop-act .pop-con{width: 196px;height: 223px;margin:0 auto;background: url(//game.gtimg.cn/images/hyrz/web201807/pop-act.png) no-repeat top center;position: relative;z-index: 1;text-align: center;}
+.pop-act .pop-cat{position: absolute;left: 6px;top: -104px;animation:upDown .8s infinite alternate;-webkit-animation:upDown .8s infinite alternate;}
+.pop-act .btn-pop-close{display: block;width: 44px;height: 34px;background-position: -665px -1466px;right: 0;top: -145px;position: absolute;}
+.pop-act p{left: 0;right: 0;margin: 0 auto;color:#86040a;font-weight: bold;position: absolute;}
+.pop-act .pop-game-name{font-size: 16px;width: 125px;top: 50px;line-height: 35px;height: 35px;overflow: hidden;}
+.pop-act .game-countdown{font-size: 18px;line-height: 95px;top: 90px;}
+.pop-act .game-countdown em{font-size: 71px;}
+
+/* sec3 */
+.scroll-box{width: 100%;position: relative;}
+.scroll-bar{width: 121px;position: absolute;left: -285px;top: -50px;z-index: 1;}
+.scroll-mid{width: 1518px;height: 590px;background: url(//game.gtimg.cn/images/hyrz/web201807/scroll-mid.jpg) no-repeat right center;position: absolute;left: -210px;top: 50px;}
+.scroll-con{position: relative;height: 100%;padding: 1px;}
+.scroll-con .scroll-top{width: 652px;height: 78px;background-position: 0 -1004px;margin: 70px 0 0 180px;position: relative;}
+.scroll-top .ninja-choose{height: 100%;}
+.scroll-top li{font-size: 0;color:transparent;display: block;position: absolute;top:0;height: 100%;width: 80px;}
+.scroll-top .nc-label01{left: 78px;}
+.scroll-top .nc-label02{left: 173px;}
+.scroll-top .nc-label03{left: 253px;}
+.scroll-top .nc-label04{left: 332px;}
+.scroll-top .nc-label05{left: 411px;}
+.scroll-top li label{display: block;height: 100%;position: relative;z-index: 1;}
+.scroll-top .nc-label01 label{background-position: -77px -1093px;}
+.scroll-top .nc-label02 label{background-position: -173px -1093px;}
+.scroll-top .nc-label03 label{background-position: -254px -1093px;}
+.scroll-top .nc-label04 label{background-position: -329px -1093px;}
+.scroll-top .nc-label05 label{background-position: -407px -1093px;}
+.scroll-top li input{display: block;width: 100%;height: 100%;margin: 0;opacity: 0;filter:alpha(opacity=0);cursor: pointer;}
+.scroll-top li.on:before{content: '';display: block;position: absolute;width: 86px;height: 94px;background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat -277px -517px;left: -4px;top: -26px;}
+.ninja-list{width: 652px;margin: 20px 0 0 180px;position: relative;height: 300px;}
+.ninja-list ul{height: 100%;overflow: hidden;margin-left: -40px;}
+.ninja-list li{float: left;position: relative;margin: 40px 0 0 50px;width: 108px;height: 106px;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-ninja.png) no-repeat 0 0;}
+.ninja-list li a{display: block;height: 100%;}
+.ninja-list .img-box{width: 78px;height: 78px;overflow: hidden;margin: 14px auto;}
+.ninja-list li img{min-height: 100%;width: 100%;}
+.ninja-list .ninja-label{width: 46px;height: 52px;display: block;background-position: -467px -542px;position: absolute;right: -18px;top: -40px;}
+.ninja-list .btn-ninja-prev,.ninja-list .btn-ninja-next{display: block;width: 40px;height: 33px;position: absolute;top:0;bottom:0;margin:auto 0;}
+.ninja-list .btn-ninja-prev{left: -60px;background-position: -179px -595px;}
+.ninja-list .btn-ninja-next{right: -10px;background-position: -179px -647px;}
+.btn-ninja-more{display: block;width: 85px;height: 28px;background-position: -536px -549px;position: absolute;right: 5px;top: 17px; animation: mainscale 1s linear infinite alternate; -webkit-animation: mainscale 1s linear infinite alternate;}
+.ninja-img{position: absolute;right: 100px;top: -128px;}
+.sec .light{position: absolute;right: -125px;bottom: -131px;}
+
+
+/* sec4 */
+.match-tab{margin-top: 40px;}
+.match-tab .match-hd{height: 87px;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-game-center.png) no-repeat top center;text-align: center;position: relative;}
+.match-tab .match-hd li,.video-tab .hd li{height: 70px;line-height: 70px;width: 150px;margin: 17px 20px 0;display: inline-block;font-size: 20px;font-weight: bold;position: relative;}
+.match-hd li a,.video-hd li a{display: block;height: 100%;position: relative;z-index: 1;}
+.match-hd li.on a,.video-hd li.on a{color: transparent;background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat 0 0;}
+.match-hd .match-it01.on a{background-position: -210px -691px;}
+.match-hd .match-it02.on a{background-position: -217px -751px;}
+.match-hd .match-it03.on a{background-position: -395px -690px;}
+.match-hd .match-it04.on a{background-position: -395px -751px;}
+.match-hd li:before, .video-hd li:before{content: '';display: block;height: 17px;transition: width .35s;-webkit-transition:width .35s;background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat -558px -622px;position: absolute;left: 0;right: 0;margin: 0 auto;top: 28px;width: 0;}
+.match-hd .match-it01:before{background-position: -581px -665px;}
+.match-hd .match-it01.on:before{width: 122px;}
+.match-hd li.on:before,.video-hd
+ li.on:before{width: 142px;}
+.match-bd{position: relative;height: 330px;}
+/* season */
+.season-hd{position: relative;height: 65px;}
+.season-hd .btn-season{width: 60px;height: 25px;display: block;position: absolute;top: 20px;cursor: pointer;}
+.season-hd .btn-season-prev{left: -10px;background-position: -337px -636px;}
+.season-hd .btn-season-next{right: -12px;background-position: -250px -636px;}
+.season-hd li{float: left;font-size: 18px;font-weight: bold;width: 108px;text-align: center;line-height: 65px;cursor: pointer;position: relative;background: transparent;}
+.season-hd li.on{color: #fff;background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat -447px -898px;}
+.season-hd li.on:after{content: '';display: block;position: absolute;background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat -688px -839px;width: 12px;height: 6px;left: 50%;margin-left: -6px;top: 46px;}
+.season-hd .season-list{width: 850px;margin-left: 60px;overflow: hidden;height: 100%;position: relative;}
+.season-hd ul{position: absolute;left: 0;width: 1000px;height: 100%;}
+.season-bd{position: relative;}
+.season-bd .season-panel{position: absolute;left: 0;top:0;width: 100%;display: none;}
+.match-banner{width: 248px;height: 232px;overflow: hidden;float: left;}
+.match-banner a{display: block;height: 100%;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-game-border.png) no-repeat top center;overflow: hidden;}
+.match-banner img{display: block;width: 240px;min-height: 225px;margin: 3px auto;}
+.match-news{float: left;margin-left: 34px;width: 366px;}
+.match-news .match-info{height: 71px;border:1px solid #000;padding: 0 14px;margin-bottom: 8px;}
+.match-news ul{height: 150px;overflow: hidden;}
+.match-info h3{overflow: hidden;height: 32px;}
+.match-info h3 a,.match-info h3 span{font-size: 18px;font-weight: bold;color:#000;line-height: 32px;display: block;float: left;}
+.match-info h3 a{max-width: 260px;}
+.match-info h3 span{margin-left: 15px;}
+.match-info p{font-size: 14px;line-height: 16px;}
+.match-info p strong{font-weight: normal;color:#ff0000;}
+.match-news li a{color:#000;font-size: 16px;display: block;line-height: 30px;overflow: hidden;}
+.match-news li a:hover,.gl-list li a:hover{color:#ba2121;}
+.match-news li span, .match-news li p,.gl-list li span,.gl-list li p{float: left;}
+.match-news .news-icon{margin-top: 9px;background-position: -687px -787px;}
+.match-video{float: right;width: 340px;height: 250px;overflow: hidden;}
+.match-video li{float: left;width: 152px;overflow: hidden;margin: 0 0 10px 18px;}
+.match-video a{display: block;height:92px;overflow: hidden;}
+.match-video p{line-height: 22px;}
+.match-video a .mask, .video-tab .bd .mask{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);transition: all .3s;-webkit-transition: all .3s;}
+.match-video li:hover .mask,.video-tab .bd li:hover .mask{opacity: 0;filter: alpha(opacity=0);}
+.match-video img{display: block;width: 100%;min-height: 100%;}
+.video-icon{width: 120px;height: 57px;background-position: -34px -731px;position: absolute;left: 0;right: 0;margin:0 auto;top:50%;margin-top: -29px;z-index: 2;}
+.sec4 .btn-game-more{right: 80px;top: 37px; animation: mainscale 1s linear infinite alternate; -webkit-animation: mainscale 1s linear infinite alternate;}
+
+/* sec5 */
+.gl-tab .hd{width: 830px;margin: 45px auto 10px;position: relative;}
+.gl-tab .hd ul{height: 48px;overflow: hidden;text-align: center;background-position: 109px -1455px;width: 750px;}
+.gl-tab .hd li{float:left;font-size: 20px;font-weight: bold;width: 123px;height: 100%;line-height: 48px;cursor: pointer;}
+.gl-tab .hd li.on,.gl-tab .hd li:hover{background: url(//game.gtimg.cn/images/hyrz/web201807/sp.png) no-repeat -417px -619px;}
+.sec5 .btn-gl-more{display: block;width: 33px;height: 33px;position: absolute;right: 15px;top: 7px;background-position: -667px -710px; animation: mainscale 1s linear infinite alternate; -webkit-animation: mainscale 1s linear infinite alternate;}
+.sec5 .btn-gl-more:hover{filter: brightness(1.4);-webkit-filter: brightness(1.4);}
+.sec5 .gl-tab .bd{width: 1030px;position: absolute;left: -15px;top: 355px;height: 418px;}
+.slide-list .gl-it {
+	position: absolute;
+	width: 308px;
+	height: 325px;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	background-repeat: no-repeat;
+	background-position: top center;
+	overflow: hidden;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	/*z-index: -999;*/
+	top: 0;
+}
+.slide-list li.po-6 {
+	left: -9px;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	z-index: 1;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg-gl01.png);
+}
+
+.slide-list li.po-1 {
+	left: 265px;
+	width: 521px;
+	height: 413px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg-gl03.png);
+	z-index: 4;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	top: -50px;
+}
+
+.slide-list li.po-2 {
+	left: 728px;
+	z-index: 1;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg-gl02.png);
+}
+
+.slide-list li.po-3 {
+	left: 879px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg-gl02.png);
+}
+
+.slide-list li.po-4 {
+	left: 1151px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg-gl02.png);
+}
+.slide-list li.po-5 {
+	left: -149px;
+	background-image: url(//game.gtimg.cn/images/hyrz/web201807/bg-gl01.png);
+}
+.gl-tab .btn-arrow{display: block;width: 230px;height: 230px;position: absolute;top: 50px;z-index: 6;}
+.gl-tab .btn-arrow-left{left: -2px;background: url(//game.gtimg.cn/images/hyrz/web201807/arrow-left.png) no-repeat left center;}
+.gl-tab .btn-arrow-right{right: 0;background: url(//game.gtimg.cn/images/hyrz/web201807/arrow-right.png) no-repeat right center;}
+.gl-section2{
+    display: none;
+}
+.po-1 .gl-section2{
+    display: block;
+}
+.gl-title{width: 299px;height: 39px;margin: 80px auto 20px;}
+.gl-it01 .gl-title{background-position: 0 -1198px;}
+.gl-it02 .gl-title{background-position: -400px -1198px;}
+.gl-it03 .gl-title{background-position: 0px -1283px;}
+.gl-it04 .gl-title{background-position: -400px -1283px;}
+.gl-it05 .gl-title{background-position: 0 -1368px;}
+.gl-it06 .gl-title{background-position: -400px -1368px;}
+.gl-section1{position: absolute;left: 48px;top: 104px;display: none;}
+.gl-section1 p{width: 229px;height: 88px;background: url(//game.gtimg.cn/images/hyrz/web201807/gl-sp.png) no-repeat;}
+.gl-it01 .gl-section1 p{background-position: 0 0;}
+.gl-it02 .gl-section1 p{background-position: 0 -438px;}
+.gl-it03 .gl-section1 p{background-position: 0 -565px;}
+.gl-it04 .gl-section1 p{background-position: 0 -100px;}
+.gl-it05 .gl-section1 p{background-position: 0 -211px;}
+.gl-it06 .gl-section1 p{background-position: 0 -331px;}
+.gl-it01.po-2 .gl-section1 p,.gl-it01.po-3 .gl-section1 p{background-position: -320px 0;}
+.gl-it02.po-2 .gl-section1 p,.gl-it02.po-3 .gl-section1 p{background-position: -308px -438px;}
+.gl-it03.po-2 .gl-section1 p,.gl-it03.po-3 .gl-section1 p{background-position: -323px -565px;}
+.gl-it04.po-2 .gl-section1 p,.gl-it04.po-3 .gl-section1 p{background-position: -320px -100px;}
+.gl-it05.po-2 .gl-section1 p,.gl-it05.po-3 .gl-section1 p{background-position: -320px -211px;}
+.gl-it06.po-2 .gl-section1 p,.gl-it06.po-3 .gl-section1 p{background-position: -320px -331px;}
+.gl-it.po-2 .gl-section1,.gl-it.po-6 .gl-section1{display: block;}
+.gl-list{padding: 0 70px;height: 185px;overflow: hidden;}
+.gl-list li{border-bottom: 1px dotted #000;}
+.gl-list a{color:#000;font-size: 16px;display: block;line-height: 36px;overflow: hidden;height: 36px;}
+.gl-list .news-icon{background-position: -687px -787px}
+
+/* sec6 */
+.video-tab{margin-top: 20px;}
+.btn-video-more,.btn-game-more{position: absolute;right: 10px;top: 16px;width: 33px;height: 33px;background-position: -619px -710px;transition: all .3s;-webkit-transition: all .3s;}
+.sec6 .btn-video-more{animation: mainscale 1s linear infinite alternate;-webkit-animation: mainscale 1s linear infinite alternate;}
+.btn-video-more:hover,.btn-game-more:hover{filter: brightness(1.4);-webkit-filter: brightness(1.4);}
+.video-tab .hd{height: 65px;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-video-center.png) no-repeat top center;text-align: center;position: relative;}
+.video-tab .hd li{line-height: 65px;margin:0 10px 0;}
+.video-hd li:before{top:25px;}
+.video-hd .video-it01.on a{background-position: 31px -814px;}
+.video-hd .video-it02.on a{background-position: -175px -814px;}
+.video-hd .video-it03.on a{background-position: -431px -814px;}
+.video-hd .video-it04.on a{background-position: 31px -892px;}
+.video-hd .video-it05.on a{background-position: -175px -892px;}
+.video-tab .bd{position: relative;}
+.video-tab .tab-panel{height: 400px;overflow: hidden;margin-top: 20px;}
+.video-tab .tab-panel ul{margin-left: -13px;}
+.video-tab .tab-panel img{width: 100%;display: block;min-height: 100%;}
+.video-tab .bd li{width: 240px;overflow: hidden;float: left;margin: 13px 0 0 13px;}
+.video-tab .bd a{display: block;height: 151px;}
+.video-tab .bd p{padding-left: 23px;background: url(//game.gtimg.cn/images/hyrz/web201807/bg-video-list.png) no-repeat left center; white-space: nowrap;text-overflow: ellipsis;overflow: hidden;font-size: 18px;color: #414040;line-height: 35px;}
+.video-tab .bd li:hover p{color:#95460f;}
+
+
+
+
+@keyframes upDown {
+  from {
+    transform:translateY(-5%);
+  }
+
+  to {
+    transform:translateY(0);
+  }
+}
+@-webkit-keyframes upDown {
+  from {
+    -webkit-transform:translateY(-5%);
+  }
+
+  to {
+    -webkit-transform:translateY(0);
+  }
+}
+@-webkit-keyframes upToDown {
+  from {
+    -webkit-transform: translateY(4%);
+  }
+
+  to {
+    -webkit-transform:translateY(-4%);
+  }
+}
+@keyframes upToDown {
+  from {
+    transform: translateY(4%);
+  }
+
+  to {
+    transform:translateY(-4%);
+  }
+}
+@keyframes mainbarcode {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 120px, 0);
+    }
+}
+@-webkit-keyframes mainbarcode {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 120px, 0);
+    }
+}
+
+@keyframes mainscale {
+    0% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes mainscale {
+    0% {
+        -webkit-transform: scale(.8);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .pop-act{left: -190px;}
+}
+
+/*setTimeDialog*/
+.setTimeDialog {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none
+}
+.setTimeDialog .liveVideoTimeText{position: absolute;width: 100%;text-align: center;color: #fff;font-size:14px;}
+.setTimeDialog .closeLiveVideo:hover {
+    transform: scale(1.2);
+}
+.setTimeDialog .liveDetail {
+    width: 219px;
+    height: 53px;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    margin-top: 290px;
+    margin-left: -105px;
+}
+.setTimeDialog .closeLiveVideo {
+    width: 53px;
+    height: 47px;
+    position: absolute;
+    top: 265px;
+    left: 50%;
+    margin-left: 430px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.setTimeDialog .innerLiveVideo {
+    width: 610px;
+    height: 370px;
+    position: absolute;
+    top: 292px;
+    left: 50%;
+    margin-left: -305px;
+}
+/* tga */
+.setTimeDialog.tga .liveVideoTimeText{top:250px;left:15px}
+.setTimeDialog.tga .liveVideo {
+    width: 770px;
+    height: 770px;
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/tga/dialog.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -385px;
+    margin-left: -338px;
+}
+.setTimeDialog.tga .liveDetail {
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/tga/detail.png) no-repeat;
+}
+.setTimeDialog.tga .innerLiveVideo {}
+.setTimeDialog.tga .closeLiveVideo {
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/tga/close.png);
+}
+/* 无差别 */
+.setTimeDialog.wcb .liveVideoTimeText{top:215px;left:2px}
+.setTimeDialog.wcb .liveVideo {
+    width: 770px;
+    height: 770px;
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/wcb/dialog.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -385px;
+    margin-left: -338px;
+}
+.setTimeDialog.wcb .liveVideo .icon1{position: absolute;width: 24px;height: 85px;top:3px;left:260px;background-size:100% 100%;}
+.setTimeDialog.wcb .liveDetail {
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/wcb/detail.png) no-repeat;
+    margin-top: 242px;
+}
+.setTimeDialog.wcb .innerLiveVideo {
+    top: 243px;
+}
+.setTimeDialog.wcb .closeLiveVideo {
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/wcb/close.png);
+    top: 218px;
+}
+/* NUF */
+.setTimeDialog.nuf .liveVideoTimeText{top:215px;left:2px}
+.setTimeDialog.nuf .liveVideo {
+    width: 770px;
+    height: 770px;
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/nuf/dialog.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -385px;
+    margin-left: -338px;
+}
+.setTimeDialog.nuf .liveVideo .icon1{position: absolute;width: 24px;height: 85px;top:3px;left:260px;background-size:100% 100%;}
+.setTimeDialog.nuf .liveDetail {
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/nuf/detail.png) no-repeat;
+    margin-top: 242px;
+}
+.setTimeDialog.nuf .innerLiveVideo {
+    top: 243px;
+}
+.setTimeDialog.nuf .closeLiveVideo {
+    background: url(//game.gtimg.cn/images/hyrz/web201807/dialog/nuf/close.png);
+    top: 218px;
+}
