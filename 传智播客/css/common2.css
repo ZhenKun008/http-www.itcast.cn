@@ -1,0 +1,21 @@
+.box-hd{
+    display: block;
+    margin:0 auto;
+    width:1200px
+}
+
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+    /* width:1226px; */
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
